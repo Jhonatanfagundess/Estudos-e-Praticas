@@ -1,0 +1,23 @@
+<!--Fizemos a separação do head do html em outra pastas (includes) e assim 
+podemos importar para outros arquivos-->
+
+<!--A importação aqui -->
+<%- includes('includes/head') %> 
+<body>
+
+    <section class="container">
+        <h1> Uma Var Global  </h1>
+
+        <form action="/" method="post">
+            <input type="hidden" name="csrf" value="<%= crsfToken  %>">
+            <label>Clientes</label>
+            <input type="text" name="cliente" id="cliente">
+            <button>Submit</button>
+
+        </form>    
+
+    </section>
+
+   <script src="assets/js/bundle.js"></script> 
+</body>
+</html>
